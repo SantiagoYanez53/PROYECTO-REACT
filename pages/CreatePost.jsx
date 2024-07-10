@@ -9,13 +9,13 @@ export default function CreatePost() {
     const { handleSubmit, register,  formState: { errors } } = useForm();
 
     async function onSubmit(data) { 
+        console.log(data); // Añadido para verificar los datos
         try {
-            createPost(data.tittle, data.image, data.body, data.user);
-                toast.success("Post registrado");
-                router.push();
-        
+            await createPost(data.tittle, data.body, data.user, data.image);
+            toast.success("Post registrado");
+            router.push('');
         } catch (error) {
-            toast.error("Error")
+            toast.error("Error");
         }
     }
         
@@ -42,19 +42,14 @@ export default function CreatePost() {
                     <input
                         className="flex justify-around relative mt-14 ml-80 p-6 border-transparent rounded-md bg-white h-10 w-80 placeholder-gray-500 placeholder:font-bold focus:outline-none"
                         placeholder="Put your Image link"
-                        {...register("image", {
-                            required: {
-                                value: true,
-                            },
-                        })}
+                        type="text"
+                        {... register('image')}
                     />
-                </div>
-               
                 
-                <div>
                     <input
                         className="flex justify-around relative mt-8 ml-80 p-20 border-transparent rounded-md bg-white w-6/12 text-5xl placeholder-gray-500 placeholder:font-bold focus:outline-none"
                         placeholder="New post title here..."
+                        type="text"
                         {...register("tittle", {
                             required: {
                                 value: true,
@@ -66,7 +61,8 @@ export default function CreatePost() {
                     <textarea
                         className="flex justify-around relative mt-3 ml-80 p-20 border-transparent rounded-md bg-white w-6/12 h-96 text-2x1 placeholder-gray-500 placeholder:font-mono focus:outline-none"
                         placeholder="Write your post content here ..."
-                        {...register("body", {
+                        type="text"
+                        {...register('body', {
                             required: {
                                 value: true,
                                 message: "El Contenido es requerido",

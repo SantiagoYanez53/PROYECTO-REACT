@@ -1,10 +1,12 @@
 import { useState, useEffect } from "react"; 
 import { getPost, getPostById } from "@/lib/api";
 import { Post } from "react-router-dom";
+import { useRouter } from "next/router";
 
 
     export default function Content ({}) {
       const [posts, setPosts] = useState([]);
+      const router = useRouter();
 
       useEffect(() => {
           getPost ()
@@ -27,52 +29,43 @@ import { Post } from "react-router-dom";
                         <p className="p-1 text-sm">Anmol Baranwal</p>
                     </span>
 
-                    <h1 className="font-bold text-4xl  pl-12">
+                    <h1 className="font-bold text-4xl pl-12">
                     15 amazing things you can do with simple JavaScript
                     </h1>
-                    <p className="text-sm pl-12 pt-2 opacity-80 mb-4">#Javascript   #beginners   #programming   #webdv</p>
+                    <p className="text-m pl-12 pt-2 opacity-80 mb-4">#Javascript   #beginners   #programming   #webdv</p>
                 </div>
                 <header>
-                <h1>Posts</h1>
+                
             </header>
-            <div className="w-full flex flex-col bg-white rounded-md pb-8">
+            
+            <div className="
+                flex
+                flex-col
+                gap-2 w-8/12">
               {
                 posts.map((post,idx) => {
                   return(
-                    <>
-                    <img className="
-                                    w-full
-                                    rounded-t-lg
-                                " src="https://imgs.search.brave.com/BWn2ZkEOnHxoCZDzIemCAb2d2anSn-jSEBkT-FbBBA0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/cHJlbWl1bS1waG90/by9jYW5hZGlhbi1t/b3VudGFpbi1sYW5k/c2NhcGUtbmF0dXJl/LWJhY2tncm91bmQt/c3Vuc2V0XzY0NTg4/Mi0xMjU1Ni5qcGc_/c2l6ZT02MjYmZXh0/PWpwZw" alt="" 
-                                />
-                                <div className="
-                                    w-full
-                                    p-4
-                                    flex
-                                    gap-4
-                                ">
-                                    <img className="
-                                        size-10
-                                        rounded-full
-                                    " src="https://imgs.search.brave.com/JLmCvOzUW0TXutsulsNiriUdvcbxhtIKdcfMxN2BI30/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzA0Lzk1LzE1Lzc5/LzM2MF9GXzQ5NTE1/Nzk3MV96SWh6amZ4/M3lHMUFzZ1lPVFFT/OVo2VkhBc04wT0pT/SS5qcGc" alt="" 
-                                    />
-                                    <div className="
-                                        w-full
-                                        flex
-                                        flex-col
-                                    " > 
-                                        <h1 className="
-                                            font-semibold
-                                        ">Name</h1>
-                                        <span className="
-                                            text-xs
-                                            text-[#ACACAC]
-                                        " >Jul 8</span>
-                                    </div>
-                                </div>
-                                
-                            </>
-                        )
+                    <div key={`key${idx}`} className="w-full flex flex-col bg-white rounded-md pb-8">
+                    <img className="flex flex-col justify-center w-full rounded-t-md pb-2" src={post.image} alt={post.tittle} />
+                        
+                        <span className=" w-8/12 p-2 flex mb-2"> 
+                         <img className="size-10 rounded-full" src={post.user.profilePic} alt={post.user.user} />
+                        <h1 className="font-semibold ml-2">
+                             {post.user.name}
+                        </h1>
+
+                        
+                        </span>
+                        <span className="text-s text-[#ACACAC] ml-14 mt-[-30px] flex flex-col">
+                             Jul 8
+                         </span>
+                        
+                         <span className="font-bold text-4xl pl-12 cursor-pointer" onClick={(token) => router.push("/DetailPost")}>
+                             <h1 >{post.tittle}</h1>
+                         </span>
+                         <p className="text-m pl-12 mt-2 opacity-80 mb-4">#Javascript   #beginners   #programming   #webdv</p>
+                     </div>
+                     )
                     })
                 }
                     
