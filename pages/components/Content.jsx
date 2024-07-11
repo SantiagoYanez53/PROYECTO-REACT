@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react"; 
 import { getPost, getPostById } from "@/lib/api";
-import { Post } from "react-router-dom";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 
     export default function Content ({}) {
@@ -60,9 +60,9 @@ import { useRouter } from "next/router";
                              Jul 8
                          </span>
                         
-                         <span className="font-bold text-4xl pl-12 cursor-pointer" onClick={(token) => router.push("/DetailPost")}>
+                         <Link className="font-bold text-4xl pl-12 cursor-pointer" href={`/Detail/${post._id}`}>
                              <h1 >{post.tittle}</h1>
-                         </span>
+                         </Link>
                          <p className="text-m pl-12 mt-2 opacity-80 mb-4">#Javascript   #beginners   #programming   #webdv</p>
                      </div>
                      )
