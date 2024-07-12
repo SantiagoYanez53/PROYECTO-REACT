@@ -2,8 +2,8 @@
 
 export default function Aside () {
     return (
-        <aside className="w-full h-full col-start-1 col-end-2 ">
-            <div className="text-md p-3">
+        <aside className="w-full h-full flex-col grid-col-start-1 grid-col-end-2 hidden sm:flex sm:grid-cols-2 ">
+            <div className="text-md p-3 sm:w-96">
             <span >
                <button className=" py-2 pr-40 rounded-md hover:bg-blue-700/10 hover:underline">🏠 Home</button> 
             </span>
@@ -89,7 +89,7 @@ export default function Aside () {
             <br></br>
             </div>
             
-            <div>
+            <div className="sm:w-60">
                 <span className="flex flex-row cursor-pointer p-2">   
                 <svg className="pr-2 pl-2 rounded-md hover:bg-blue-700/20"  width="40px" opacity="70%" fill="#000000"   version="1.1" id="Layer_1" viewBox="-143 145 512 512" ><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <path d="M113,145c-141.4,0-256,114.6-256,256s114.6,256,256,256s256-114.6,256-256S254.4,145,113,145z M215.2,361.2 c0.1,2.2,0.1,4.5,0.1,6.8c0,69.5-52.9,149.7-149.7,149.7c-29.7,0-57.4-8.7-80.6-23.6c4.1,0.5,8.3,0.7,12.6,0.7 c24.6,0,47.3-8.4,65.3-22.5c-23-0.4-42.5-15.6-49.1-36.5c3.2,0.6,6.5,0.9,9.9,0.9c4.8,0,9.5-0.6,13.9-1.9 C13.5,430-4.6,408.7-4.6,383.2v-0.6c7.1,3.9,15.2,6.3,23.8,6.6c-14.1-9.4-23.4-25.6-23.4-43.8c0-9.6,2.6-18.7,7.1-26.5 c26,31.9,64.7,52.8,108.4,55c-0.9-3.8-1.4-7.8-1.4-12c0-29,23.6-52.6,52.6-52.6c15.1,0,28.8,6.4,38.4,16.6 c12-2.4,23.2-6.7,33.4-12.8c-3.9,12.3-12.3,22.6-23.1,29.1c10.6-1.3,20.8-4.1,30.2-8.3C234.4,344.5,225.5,353.7,215.2,361.2z"></path> </g></svg>
                 <svg className="pr-2 pl-2 rounded-md hover:bg-blue-700/20" width="45px" opacity="70%" fill="#000000" viewBox="-5.5 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg"><g id="SVGRepo_bgCarrier" stroke-width="0"></g><g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g><g id="SVGRepo_iconCarrier"> <title>facebook</title> <path d="M1.188 5.594h18.438c0.625 0 1.188 0.563 1.188 1.188v18.438c0 0.625-0.563 1.188-1.188 1.188h-18.438c-0.625 0-1.188-0.563-1.188-1.188v-18.438c0-0.625 0.563-1.188 1.188-1.188zM14.781 17.281h2.875l0.125-2.75h-3v-2.031c0-0.781 0.156-1.219 1.156-1.219h1.75l0.063-2.563s-0.781-0.125-1.906-0.125c-2.75 0-3.969 1.719-3.969 3.563v2.375h-2.031v2.75h2.031v7.625h2.906v-7.625z"></path> </g></svg>
@@ -104,7 +104,7 @@ export default function Aside () {
              <p>TAGS </p>
             </div>
 
-            <div className="flex flex-col bg-white m-4 rounded-md w-64">
+            <div className="flex flex-col bg-white m-4 rounded-md w-64 sm:w-52">
                 <p className="text-gray-600 p-3 text-sm">DEV Comunity</p>
                 <img className="flex px-3 " src="https://res.cloudinary.com/practicaldev/image/fetch/s--MV0h6VJf--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_auto%2Cw_350/https://dev-to-uploads.s3.amazonaws.com/uploads/articles/rwdadr222nahumlzn0ff.jpg" alt="DevtoImage"/>
                 <p className="font-bold text-2xl opacity-70 m-3">Stay in the loop with the latest articles, .trends, and tips in the developer community.</p>

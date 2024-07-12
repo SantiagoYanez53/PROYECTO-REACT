@@ -13,7 +13,7 @@ export default function CreatePost() {
         try {
             await createPost(data.tittle, data.body, data.user, data.image);
             toast.success("Post registrado");
-            router.push('');
+            router.push('/');
         } catch (error) {
             toast.error("Error");
         }
@@ -25,9 +25,9 @@ export default function CreatePost() {
        
 
     return (
-        <main className="flex flex-col w-full min-h-screen bg-gray-500/20">
-            <div className="flex mb-[-50px]">
-                <svg className="w-14 ml-80" fill="#000000" viewBox="0 0 24 24" role="img">
+        <main className="flex flex-col w-full min-h-screen bg-gray-500/20 ">
+            <div className="flex mb-[-50px] max-sm:w-[150%] max-sm:ml-[-70%] md:ml-[-20%] 2xl:ml-[-15%]">
+                <svg className="w-14 ml-80 " fill="#000000" viewBox="0 0 24 24" role="img">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
                     <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
                     <g id="SVGRepo_iconCarrier">
@@ -40,14 +40,14 @@ export default function CreatePost() {
             <form onSubmit={handleSubmit(onSubmit)}>
                 <div>
                     <input
-                        className="flex justify-around relative mt-14 ml-80 p-6 border-transparent rounded-md bg-white h-10 w-80 placeholder-gray-500 placeholder:font-bold focus:outline-none"
+                        className="flex justify-around relative mt-14 ml-80 p-6 border-transparent rounded-md bg-white h-10 w-80 placeholder-gray-500 placeholder:font-bold focus:outline-none max-sm:ml-[5%] md:ml-[21%] "
                         placeholder="Put your Image link"
                         type="text"
                         {... register('image')}
                     />
                 
                     <input
-                        className="flex justify-around relative mt-8 ml-80 p-20 border-transparent rounded-md bg-white w-6/12 text-5xl placeholder-gray-500 placeholder:font-bold focus:outline-none"
+                        className="flex justify-around relative mt-8 ml-80 p-20 border-transparent rounded-md bg-white w-6/12 text-5xl placeholder-gray-500 placeholder:font-bold focus:outline-none max-sm:ml-[5%] max-sm:w-[90%] max-sm:text-lg md:ml-[21%] md:w-[70%] md:text-2xl"
                         placeholder="New post title here..."
                         type="text"
                         {...register("tittle", {
@@ -59,7 +59,7 @@ export default function CreatePost() {
                 </div>
                 <div className="h-48">
                     <textarea
-                        className="flex justify-around relative mt-3 ml-80 p-20 border-transparent rounded-md bg-white w-6/12 h-96 text-2x1 placeholder-gray-500 placeholder:font-mono focus:outline-none"
+                        className="flex justify-around relative mt-3 ml-80 p-20 border-transparent rounded-md bg-white w-6/12 h-96 text-2x1 placeholder-gray-500 placeholder:font-mono focus:outline-none max-sm:ml-[5%] max-sm:w-[90%] max-sm:text-lg md:ml-[21%] md:w-[70%] "
                         placeholder="Write your post content here ..."
                         type="text"
                         {...register('body', {
@@ -69,7 +69,7 @@ export default function CreatePost() {
                             },
                         })}
                     />
-                    <button className="ml-80 mt-3 bg-[#4e57ef] text-white h-10 w-20 rounded-md" type="submit">Publish</button>
+                    <button className="ml-80 mt-3 bg-[#4e57ef] text-white h-10 w-20 rounded-md md:ml-[21%]" type="submit">Publish</button>
                 </div>
             </form>
         </main>

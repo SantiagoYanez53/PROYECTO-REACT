@@ -63,38 +63,38 @@ export default function Register() {
                 </span>
                 
                 <button className="flex justify-center pt-3 font-semibold">
-                    <span className="border-black/20 border-[1px] rounded-md h-12 w-[140%] pt-2 flex justify-center hover:bg-zinc-400/10">
+                    <span className="border-black/20 border-[1px] rounded-md h-12 w-[140%] pt-2 flex justify-center hover:bg-zinc-400/10 max-sm:w-96 max-sm:ml-5">
                     Continue with Apple
                     </span>
                 </button>
                 
                 <button className="flex justify-center pt-3 font-semibold">
-                    <span className="border-black/20 border-[1px] rounded-md h-12 w-[140%] pt-2 flex justify-center hover:bg-zinc-400/10">
+                    <span className="border-black/20 border-[1px] rounded-md h-12 w-[140%] pt-2 flex justify-center hover:bg-zinc-400/10 max-sm:w-96 max-sm:ml-5">
                     Continue with Facebook
                     </span>
                 </button>
                 <button className="flex justify-center pt-3 font-semibold">
-                    <span className="border-black/20 border-[1px] rounded-md h-12 w-[140%] pt-2 flex justify-center hover:bg-zinc-400/10">
+                    <span className="border-black/20 border-[1px] rounded-md h-12 w-[140%] pt-2 flex justify-center hover:bg-zinc-400/10 max-sm:w-96 max-sm:ml-5" >
                     Continue with Forem
                     </span>
                 </button>
                 <button className="flex justify-center pt-3 font-semibold">
-                    <span className="border-black/20 border-[1px] rounded-md h-12 w-[140%] pt-2 flex justify-center hover:bg-zinc-400/10">
+                    <span className="border-black/20 border-[1px] rounded-md h-12 w-[140%] pt-2 flex justify-center hover:bg-zinc-400/10 max-sm:w-96 max-sm:ml-5">
                     Continue with GitHub
                     </span>
                 </button>
                 <button className="flex justify-center pt-3 font-semibold">
-                    <span className="border-black/20 border-[1px] rounded-md h-12 w-[140%] pt-2 flex justify-center hover:bg-zinc-400/10">
+                    <span className="border-black/20 border-[1px] rounded-md h-12 w-[140%] pt-2 flex justify-center hover:bg-zinc-400/10 max-sm:w-96 max-sm:ml-5">
                     Continue with Apple
                     </span>
                 </button>
                 <button className="flex justify-center pt-3 font-semibold">
-                    <span className="border-black/20 border-[1px] rounded-md h-12 w-[140%] pt-2 flex justify-center hover:bg-zinc-400/10">
+                    <span className="border-black/20 border-[1px] rounded-md h-12 w-[140%] pt-2 flex justify-center hover:bg-zinc-400/10 max-sm:w-96 max-sm:ml-5">
                     Continue with Google
                     </span>
                 </button>
                 <button className="flex justify-center pt-3 font-semibold">
-                    <span className="border-black/20 border-[1px] rounded-md h-12 w-[140%] pt-2 flex justify-center hover:bg-zinc-400/10">
+                    <span className="border-black/20 border-[1px] rounded-md h-12 w-[140%] pt-2 flex justify-center hover:bg-zinc-400/10 max-sm:w-96 max-sm:ml-5">
                     Continue with Twitter(X)
                     </span>
                 </button>
@@ -103,9 +103,9 @@ export default function Register() {
             className="flex flex-col mt-3 "
             onSubmit={handleSubmit(onSubmit)}
           >
-            <p className="mt-2">User</p>
+            <p className="mt-2 max-sm:ml-5 max-sm:mt-5">User</p>
             <input
-              className="w-full border-black/20 border-[1px] h-10 rounded-md hover:border-[#4e57ef] p-3"
+              className="w-full border-black/20 border-[1px] h-10 rounded-md hover:border-[#4e57ef] p-3 max-sm:w-96 max-sm:ml-5"
               required
               type="text"
               {...register("user", {
@@ -115,9 +115,9 @@ export default function Register() {
                 },
               })}
             />
-            <p className="mt-2">Name</p>
+            <p className="mt-2 max-sm:ml-5 max-sm:mt-5">Name</p>
             <input
-              className="w-full border-black/20 border-[1px] h-10 rounded-md hover:border-[#4e57ef] p-3"
+              className="w-full border-black/20 border-[1px] h-10 rounded-md hover:border-[#4e57ef] p-3 max-sm:w-96 max-sm:ml-5"
               required
               type="text"
               {...register("name", {
@@ -127,9 +127,9 @@ export default function Register() {
                 },
               })}
             />
-            <p>Email</p>
+            <p className="max-sm:ml-5 max-sm:mt-5">Email</p>
             <input
-              className="w-full border-black/20 border-[1px] h-10 rounded-md hover:border-[#4e57ef] p-3"
+              className="w-full border-black/20 border-[1px] h-10 rounded-md hover:border-[#4e57ef] p-3 max-sm:w-96 max-sm:ml-5"
               required
               {...register("email", {
                 required: {
@@ -138,9 +138,9 @@ export default function Register() {
                 },
               })}
             />
-            <p>Password</p>
+            <p className="max-sm:ml-5 max-sm:mt-5">Password</p>
             <input
-              className="w-full border-black/20 border-[1px] h-10 rounded-md hover:border-[#4e57ef] p-3"
+              className="w-full border-black/20 border-[1px] h-10 rounded-md hover:border-[#4e57ef] p-3 max-sm:w-96 max-sm:ml-5"
               required
               {...register("password", {
                 required: {
@@ -149,9 +149,9 @@ export default function Register() {
                 },
               })}
             />
-            <p>Profile Pic</p>
+            <p className="max-sm:ml-5 max-sm:mt-5">Profile Pic</p>
             <input
-              className="w-full border-black/20 border-[1px] h-10 rounded-md hover:border-[#4e57ef] p-3"
+              className="w-full border-black/20 border-[1px] h-10 rounded-md hover:border-[#4e57ef] p-3 max-sm:w-96 max-sm:ml-5"
               required
               {...register("profilePic", {
                 required: {
@@ -162,7 +162,7 @@ export default function Register() {
               />
 
            
-            <button className="bg-[#4e57ef]  text-white border-[1px] mt-3 rounded-md h-12 w-[50%] pt-2 flex justify-center hover:bg-blue-800" type="submit" on onClick={() => {router.push("/Login")}}>
+            <button className="bg-[#4e57ef]  text-white border-[1px] mt-3 rounded-md h-12 w-[50%] pt-2 flex justify-center hover:bg-blue-800 max-sm:ml-5" type="submit" on onClick={() => {router.push("/Login")}}>
               Create account
             </button>
           </form>

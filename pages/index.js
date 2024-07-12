@@ -10,9 +10,9 @@ import { useEffect, useState } from "react";
 //components
 export default function Home () {
     return (
-        <main className="w-full min-h-screen bg-gray-500/20 grid grid-cols-[20%_3fr_20%] grid-rows-[4rem_3fr] ">
+        <main className="w-full min-h-screen bg-gray-500/20 grid grid-cols-[20%_3fr_20%] grid-rows-[4rem_3fr] max-sm:bg-gray-500/20  ">
             
-            <header className="col-span-3 sticky"> 
+            <header className="col-span-3"> 
                 <Navbar />
             </header>
             
