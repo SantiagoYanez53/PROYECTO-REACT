@@ -41,7 +41,7 @@ import Link from "next/link";
             
             <div className="
                 flex
-                flex-col
+                flex-col-reverse
                 gap-2 w-8/12">
               {
                 posts.map((post,idx) => {
